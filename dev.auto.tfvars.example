@@ -1,0 +1,9 @@
+aws_access_key        = "ASIAVEZQ3WJY2KR216362"
+aws_secret_key        = "TU+qlmgcNsX5MQz1238214821748211"
+aws_token_key         = "123872183721857128............."
+db_url = "..."
+db_username = "fiap"
+db_password = "fiap-lanchonete"
+mercado_pago_api_key  = "TEST-8402790990254628-112619-4290252fdac6fd07a3b8bb555578ff39-662144664"
+mercado_pago_id_loja  = "1B2D92F23"
+mercado_pago_id_conta = 662144664
