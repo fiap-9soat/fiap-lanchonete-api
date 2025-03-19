@@ -29,8 +29,6 @@ on:
         required: true
       PAT:
         required: true
-      EKS_CLUSTER_NAME:
-        required: true
 
 env:
   TF_VAR_aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
@@ -43,7 +41,6 @@ env:
   TF_VAR_mercado_pago_api_key: ${{ secrets.MERCADO_API_KEY }}
   TF_VAR_mercado_pago_id_loja: ${{ secrets.ID_LOJA }}
   TF_VAR_mercado_pago_id_conta: ${{ secrets.ID_CONTA }}
-  TF_VAR_eks_cluster_name: ${{ secrets.EKS_CLUSTER_NAME }}
 
 jobs:
   terraform:
