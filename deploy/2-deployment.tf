@@ -4,6 +4,8 @@ resource "kubernetes_deployment" "fiap_lanchonete_deployment" {
   }
   wait_for_rollout = true
 
+  depends_on = [kubernetes_config_map.mercado_pago_config, kubernetes_secret.mysql_secret, kubernetes_secret.mercado_pago_secret]
+
   spec {
     replicas = 1
     selector {
