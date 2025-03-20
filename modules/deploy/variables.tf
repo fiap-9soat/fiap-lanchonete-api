@@ -20,12 +20,6 @@ variable "aws_token_key" {
   default     = ""
 }
 
-variable "db_url" {
-  type        = string
-  description = "The URL of the MySQL instance"
-  default     = "mysql:3306"
-}
-
 variable "db_username" {
   type        = string
   description = "Usuario do DB, deve ser o mesmo especificado na configuraçao do RDS"

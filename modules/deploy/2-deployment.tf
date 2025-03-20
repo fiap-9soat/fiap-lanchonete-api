@@ -1,3 +1,7 @@
+data "aws_db_instance" "fiap_lanchonete_db" {
+  db_instance_identifier = "fiap-lanchonete-db"
+}
+
 resource "kubernetes_deployment" "fiap_lanchonete_deployment" {
   metadata {
     name = "fiap-lanchonete"
@@ -43,7 +47,7 @@ resource "kubernetes_deployment" "fiap_lanchonete_deployment" {
           }
           env {
             name  = "DB_URL"
-            value = var.db_url
+            value = data.aws_db_instance.fiap_lanchonete_db.endpoint
           }
         }
       }

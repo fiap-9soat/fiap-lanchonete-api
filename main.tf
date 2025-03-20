@@ -13,7 +13,6 @@ module "deployment" {
   aws_access_key        = var.aws_access_key
   aws_secret_key        = var.aws_secret_key
   aws_token_key         = var.aws_token_key
-  db_url                = var.db_url
   db_username           = var.db_username
   db_password           = var.db_password
   mercado_pago_api_key  = var.mercado_pago_api_key
