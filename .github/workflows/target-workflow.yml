@@ -59,7 +59,7 @@ jobs:
       - name: Checkout the repository to the runner
         uses: actions/checkout@v4
         with:
-          repository: fiap-9soat/fiap-lanchonete
+          repository: fiap-9soat/fiap-lanchonete-api
           token: ${{ secrets.PAT }}
           clean: true
 
