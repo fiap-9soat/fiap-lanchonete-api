@@ -26,17 +26,17 @@ resource "kubernetes_deployment" "fiap_lanchonete_deployment" {
           }
           env_from {
             config_map_ref {
-              name = resource.kubernetes_config_map.mercado_pago_config.metadata[0].name
+              name = kubernetes_config_map.mercado_pago_config.metadata[0].name
             }
           }
           env_from {
             secret_ref {
-              name = resource.kubernetes_secret.mysql_secret.metadata[0].name
+              name = kubernetes_secret.mysql_secret.metadata[0].name
             }
           }
           env_from {
             secret_ref {
-              name = resource.kubernetes_secret.mercado_pago_secret.metadata[0].name
+              name = kubernetes_secret.mercado_pago_secret.metadata[0].name
             }
           }
           env {
