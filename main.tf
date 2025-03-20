@@ -7,7 +7,7 @@ data "aws_eks_cluster_auth" "eks_cluster_auth" {
 }
 
 module "deployment" {
-  source = "./deploy"
+  source = "./modules/deploy"
 
   aws_region            = var.aws_region
   aws_access_key        = var.aws_access_key
