@@ -19,8 +19,6 @@ on:
         required: true
       DB_PASSWORD:
         required: true
-      DB_URL:
-        required: true
       MERCADO_API_KEY:
         required: true
       ID_LOJA:
