@@ -45,6 +45,12 @@ resource "kubernetes_deployment" "fiap_lanchonete_deployment" {
               name = kubernetes_secret.mercado_pago_secret.metadata[0].name
             }
           }
+
+          env_from {
+            secret_ref {
+              name = kubernetes_secret.aws_secret.metadata[0].name
+            }
+          }
           env {
             name  = "DB_URL"
             value = data.aws_db_instance.fiap_lanchonete_db.endpoint
