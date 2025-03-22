@@ -25,6 +25,8 @@ on:
         required: true
       ID_CONTA:
         required: true
+      URL_NOTIFICACAO:
+        required: true
       PAT:
         required: true
 
@@ -39,6 +41,7 @@ env:
   TF_VAR_mercado_pago_api_key: ${{ secrets.MERCADO_API_KEY }}
   TF_VAR_mercado_pago_id_loja: ${{ secrets.ID_LOJA }}
   TF_VAR_mercado_pago_id_conta: ${{ secrets.ID_CONTA }}
+  TF_VAR_mercado_pago_url_notificacao: ${{ secrets.URL_NOTIFICACAO }}
 
 jobs:
   terraform:

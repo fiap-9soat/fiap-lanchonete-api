@@ -30,8 +30,8 @@ resource "kubernetes_secret" "aws_secret" {
     namespace = "default"
   }
   data = {
-    AWS_ACCESS_KEY_ID     = var.aws_access_key
-    AWS_SECRET_ACCESS_KEY = var.aws_secret_key
-    AWS_TOKEN_KEY         = var.aws_token_key
+    AWS_ACCESS_KEY = var.aws_access_key
+    AWS_SECRET_KEY = var.aws_secret_key
+    AWS_TOKEN_KEY  = var.aws_token_key
   }
 }

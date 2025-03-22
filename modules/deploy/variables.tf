@@ -56,3 +56,9 @@ variable "eks_cluster_name" {
   description = "Nome do cluster EKS"
   default     = "fiap-lanchonete-eks"
 }
+
+variable "mercado_pago_url_notificacao" {
+  type        = string
+  description = "URL de notificação do Mercado Pago"
+  default     = "https://www.yourserver.com/notifications"
+}
