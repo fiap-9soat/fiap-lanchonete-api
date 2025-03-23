@@ -9,15 +9,10 @@ data "aws_eks_cluster_auth" "eks_cluster_auth" {
 module "deployment" {
   source = "./modules/deploy"
 
-  aws_region                   = var.aws_region
-  aws_access_key               = var.aws_access_key
-  aws_secret_key               = var.aws_secret_key
-  aws_token_key                = var.aws_token_key
   db_username                  = var.db_username
   db_password                  = var.db_password
   mercado_pago_api_key         = var.mercado_pago_api_key
   mercado_pago_id_loja         = var.mercado_pago_id_loja
   mercado_pago_id_conta        = var.mercado_pago_id_conta
   mercado_pago_url_notificacao = var.mercado_pago_url_notificacao
-  eks_cluster_name             = var.eks_cluster_name
 }

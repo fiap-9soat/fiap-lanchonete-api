@@ -23,15 +23,3 @@ resource "kubernetes_secret" "mercado_pago_secret" {
   }
   type = "Opaque"
 }
-
-resource "kubernetes_secret" "aws_secret" {
-  metadata {
-    name      = "aws-secret"
-    namespace = "default"
-  }
-  data = {
-    AWS_ACCESS_KEY = var.aws_access_key
-    AWS_SECRET_KEY = var.aws_secret_key
-    AWS_TOKEN_KEY  = var.aws_token_key
-  }
-}

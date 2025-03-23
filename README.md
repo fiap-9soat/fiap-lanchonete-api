@@ -183,3 +183,26 @@ providers `helm` e `kubernetes`)
 e caso o cluster "suma" depois que o estado inicial é gerado, a conexão falha e consequentemente um erro é retornado no
 `plan`.
 A solução é [limpar o estado local](#limpando-estado-local) e [re-aplicar](#aplicar-configurações) a configuração.
+
+## Utilização
+
+Para testagem da API, recomendamos a utilização de programas como o `Postman` ou `Bruno`.  
+Nós disponibilizamos coleções de teste, com o passo a passo especifico e documentação dos endpoints diretamente no repositório 
+de desenvolvimento da API.  
+
+### Coleções
+Acesse o [repositório da API](https://github.com/fiap-9soat/fiap-lanchonete?tab=readme-ov-file#utiliza%C3%A7%C3%A3o) 
+e baixe o arquivo `fiap-lanchonete.bruno.json` caso utilize o `Bruno`, ou o arquivo `fiap-lanchonet.postman.json` caso utilize `Postman`.  
+
+Após a importação, basta alterar a variavel `API_URL` para o endpoint do API Gateway criado pelo `fiap-lanchonete-infra`.  
+Esse endpoint pode ser consultado tanto no output do Terraform, como diretamente na interface da AWS:  
+API Gateway -> fiap-lanchonete-api -> Stages -> Prod -> Copiar endpoint
+
+### Autenticação
+Para realizar requisições, é obrigatório autenticar-se através da API de autenticação disponibilizada no projeto `fiap-lanchonete-auth`.
+Siga os passos a passo do [projeto de autenticação](https://github.com/fiap-9soat/fiap-lanchonete-auth) para recuperar o `IdToken` do Cognito corretamente.  
+
+Após recuperar o `IdToken`, adicione o header `Authorization` com o valor do token em **todas** as requisições da API.
+
+Exemplo:  
+![](/public/img/exemplo_header_authorization.png)
